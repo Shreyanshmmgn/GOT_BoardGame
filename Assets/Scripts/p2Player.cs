@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class p2Player : MonoBehaviour
+public class p2Player : PlayerMaster
 {
-    private void OnMousedown(){
-        
-    }
+   
+    
 }
