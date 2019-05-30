@@ -3,13 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMaster : MonoBehaviour
-{
-    // Start is called before the first frame update
+{   public bool canMove;
     public bool moveNow;
     public int NumberOfStepsToMove;
     public PathobjectParent pathsparent;
     private void Awake(){
         pathsparent= FindObjectOfType<PathobjectParent>();
     
+    }
+     private void OnMouseDown()
+    {
+        canMove = true;
+        Debug.Log(this.gameObject.name);
+        StartCoroutine("MoveStepsEnum");
     }
 }
